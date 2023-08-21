@@ -1,0 +1,6 @@
+.vscode/
+build/
+dist/
+barknotificator.egg-info/
+env/
+__pycache__/
