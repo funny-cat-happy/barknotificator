@@ -1,6 +1,7 @@
 # BarkNotificator
 - [中文](/README.md)
 - [English](docs/README_EN.md)
+- [Türkçe](docs/README_TR.md)
 
 
 此项目可以借助Bark直接向苹果手机推送信息
