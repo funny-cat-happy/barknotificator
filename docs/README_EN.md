@@ -1,6 +1,7 @@
 # BarkNotificator
 - [中文](/README.md)
 - [English](docs/README_EN.md)
+- [Türkçe](docs/README_TR.md)
 
 This project pushes information directly to Apple phones with the help of the Bark app
 # Usage
