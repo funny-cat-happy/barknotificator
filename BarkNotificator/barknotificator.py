@@ -57,6 +57,8 @@ class BarkNotificator:
         title: str,
         target_url: str = None,
         ringtone: str = "bell.caf",
+        category: str = None,
+        icon_url: str = None,
     ):
         """this method will send a message to your device.
 
@@ -65,7 +67,8 @@ class BarkNotificator:
             title (str): the title of the message to be sent.
             target_url (str, optional): the URL to jump to after clicking on the pop-up window. Defaults to None.
             ringtone (str, optional): ringtone. Defaults to "bell.caf".if you don't want to ring, set it to None.
-
+            category (str, optional): category. Defaults to None.
+            icon_url (str, optional): icon url. Defaults to None.
         Raises:
             BarkNotificatorException: _description_
         """
@@ -85,6 +88,10 @@ class BarkNotificator:
             message["aps"]["sound"] = ringtone
         if target_url is not None:
             message["url"] = target_url
+        if category is not None:
+            message["aps"]["category"] = category
+        if icon_url is not None:
+            message["icon"] = icon_url
         with httpx.Client(http2=True) as client:
             response = client.post(
                 f"https://api.push.apple.com/3/device/{self._device_token}",
